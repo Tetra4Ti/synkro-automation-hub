@@ -64,6 +64,57 @@ const translations = {
     
     // Tech Partners
     'partners.title': 'Powered by industry-leading platforms',
+    
+    // Advanced Capabilities
+    'capabilities.title': 'Advanced Automation Capabilities',
+    'capabilities.subtitle': 'Powerful n8n-based automation features',
+    'capabilities.ai.title': 'AI & Intelligent Processing',
+    'capabilities.ai.desc': 'Chatbots with OpenAI or Gemini, OCR data extraction, smart ticket classification.',
+    'capabilities.data.title': 'Data Management / ETL',
+    'capabilities.data.desc': 'Real-time sync between Airtable, PostgreSQL, MySQL, CRMs. Data cleaning and deduplication.',
+    'capabilities.marketing.title': 'Marketing & Sales',
+    'capabilities.marketing.desc': 'Automated campaigns, lead scoring, social media scheduling from databases.',
+    'capabilities.ecommerce.title': 'E-commerce & Operations',
+    'capabilities.ecommerce.desc': 'Inventory sync, automatic order creation, invoicing, and accounting integration.',
+    'capabilities.communication.title': 'Communication & Notifications',
+    'capabilities.communication.desc': 'Smart WhatsApp/SMS messages, Slack/Telegram/email alerts for key events.',
+    'capabilities.internal.title': 'Internal Processes',
+    'capabilities.internal.desc': 'Automated HR, recruitment workflows, meeting coordination across tools.',
+    'capabilities.advanced.title': 'Advanced Flows & Logic',
+    'capabilities.advanced.desc': 'Conditional branches, loops, fallbacks, and rule-based automation.',
+    'capabilities.monitoring.title': 'Monitoring & Maintenance',
+    'capabilities.monitoring.desc': 'Workflow tracking, error detection, and proactive alerts.',
+    
+    // Free Diagnostic
+    'diagnostic.title': 'Free Automation Diagnostic',
+    'diagnostic.headline': 'Discover what your business can automate — in 2 minutes.',
+    'diagnostic.description': 'Fill out a short form and get an instant report with suggested automations, estimated time savings, and a consultation invitation.',
+    'diagnostic.cta': 'Run free diagnostic',
+    'diagnostic.name': 'Name',
+    'diagnostic.company': 'Company',
+    'diagnostic.email': 'Email',
+    'diagnostic.workflow': 'Description of current workflow',
+    'diagnostic.submit': 'Get Free Report',
+    'diagnostic.success': 'Report sent! Check your email.',
+    
+    // Why Choose Synkro
+    'why.title': 'Why Choose Synkro',
+    'why.subtitle': 'The complete automation partner for modern businesses',
+    'why.diagnostic.title': 'Automated Diagnostic Tool',
+    'why.diagnostic.desc': 'Free online analyzer of business automation potential.',
+    'why.templates.title': 'Template Marketplace',
+    'why.templates.desc': 'Prebuilt automation flows by industry (retail, beauty, restaurants, clinics).',
+    'why.assistant.title': 'Synkro AI Assistant',
+    'why.assistant.desc': 'Available 24/7 to answer questions or redirect to WhatsApp.',
+    'why.monitoring.title': 'Monitoring & Maintenance Plans',
+    'why.monitoring.desc': 'Proactive system care to keep your automations running smoothly.',
+    'why.training.title': 'Training & Workshops',
+    'why.training.desc': 'Teach teams to manage their own automations.',
+    'why.scalable.title': 'Scalable Plans',
+    'why.scalable.desc': 'Basic, Advanced, Enterprise tiers to match your growth.',
+    
+    // AI Assistant
+    'assistant.tooltip': 'Chat with Synkro AI',
   },
   es: {
     // Hero
@@ -120,6 +171,57 @@ const translations = {
     
     // Tech Partners
     'partners.title': 'Impulsado por plataformas líderes en la industria',
+    
+    // Advanced Capabilities
+    'capabilities.title': 'Funciones avanzadas de automatización',
+    'capabilities.subtitle': 'Potentes funciones de automatización basadas en n8n',
+    'capabilities.ai.title': 'IA y Procesamiento Inteligente',
+    'capabilities.ai.desc': 'Chatbots con OpenAI o Gemini, extracción OCR de datos, clasificación inteligente de tickets.',
+    'capabilities.data.title': 'Gestión de Datos / ETL',
+    'capabilities.data.desc': 'Sincronización en tiempo real entre Airtable, PostgreSQL, MySQL, CRMs. Limpieza y deduplicación de datos.',
+    'capabilities.marketing.title': 'Marketing y Ventas',
+    'capabilities.marketing.desc': 'Campañas automatizadas, puntuación de leads, programación de redes sociales desde bases de datos.',
+    'capabilities.ecommerce.title': 'E-commerce y Operaciones',
+    'capabilities.ecommerce.desc': 'Sincronización de inventario, creación automática de pedidos, facturación e integración contable.',
+    'capabilities.communication.title': 'Comunicación y Notificaciones',
+    'capabilities.communication.desc': 'Mensajes inteligentes de WhatsApp/SMS, alertas de Slack/Telegram/email para eventos clave.',
+    'capabilities.internal.title': 'Procesos Internos',
+    'capabilities.internal.desc': 'Flujos de trabajo automatizados de RRHH, reclutamiento, coordinación de reuniones entre herramientas.',
+    'capabilities.advanced.title': 'Flujos y Lógica Avanzados',
+    'capabilities.advanced.desc': 'Ramas condicionales, bucles, respaldos y automatización basada en reglas.',
+    'capabilities.monitoring.title': 'Monitoreo y Mantenimiento',
+    'capabilities.monitoring.desc': 'Seguimiento de flujos de trabajo, detección de errores y alertas proactivas.',
+    
+    // Free Diagnostic
+    'diagnostic.title': 'Diagnóstico gratuito de automatización',
+    'diagnostic.headline': 'Descubre qué puedes automatizar en tu empresa — en 2 minutos.',
+    'diagnostic.description': 'Completa un breve formulario y recibe un informe instantáneo con automatizaciones sugeridas, ahorro de tiempo estimado e invitación a consulta.',
+    'diagnostic.cta': 'Hacer diagnóstico gratuito',
+    'diagnostic.name': 'Nombre',
+    'diagnostic.company': 'Empresa',
+    'diagnostic.email': 'Correo electrónico',
+    'diagnostic.workflow': 'Descripción de procesos actuales',
+    'diagnostic.submit': 'Obtener Informe Gratuito',
+    'diagnostic.success': '¡Informe enviado! Revisa tu correo.',
+    
+    // Why Choose Synkro
+    'why.title': 'Por qué elegir Synkro',
+    'why.subtitle': 'El socio completo de automatización para empresas modernas',
+    'why.diagnostic.title': 'Herramienta de Diagnóstico Automático',
+    'why.diagnostic.desc': 'Analizador online gratuito del potencial de automatización empresarial.',
+    'why.templates.title': 'Marketplace de Plantillas',
+    'why.templates.desc': 'Flujos de automatización predefinidos por industria (retail, belleza, restaurantes, clínicas).',
+    'why.assistant.title': 'Asistente Synkro AI',
+    'why.assistant.desc': 'Disponible 24/7 para responder preguntas o redirigir a WhatsApp.',
+    'why.monitoring.title': 'Planes de Monitoreo y Mantenimiento',
+    'why.monitoring.desc': 'Cuidado proactivo del sistema para mantener tus automatizaciones funcionando sin problemas.',
+    'why.training.title': 'Capacitación y Talleres',
+    'why.training.desc': 'Enseñar a los equipos a gestionar sus propias automatizaciones.',
+    'why.scalable.title': 'Planes Escalables',
+    'why.scalable.desc': 'Niveles Básico, Avanzado y Empresarial para igualar tu crecimiento.',
+    
+    // AI Assistant
+    'assistant.tooltip': 'Chatear con Synkro AI',
   },
 };
 

@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const scrollToQuote = () => {
     const element = document.getElementById('quote');
@@ -20,6 +20,12 @@ export const Footer = () => {
               <span className="text-lg font-bold">Synkro</span>
               <p className="text-xs text-muted-foreground">
                 {t('footer.tagline')}
+              </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                {language === 'en' 
+                  ? 'Synkro AI Assistant – powered by T4T Automation Systems.'
+                  : 'Asistente Synkro AI – impulsado por T4T Automation Systems.'
+                }
               </p>
             </div>
           </div>

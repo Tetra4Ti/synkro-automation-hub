@@ -42,6 +42,24 @@ export const Header = () => {
               {t('nav.services')}
             </button>
             <button 
+              onClick={() => scrollToSection('capabilities')} 
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {language === 'en' ? 'Capabilities' : 'Funciones'}
+            </button>
+            <button 
+              onClick={() => scrollToSection('why-synkro')} 
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {language === 'en' ? 'Why Synkro' : 'Por qué Synkro'}
+            </button>
+            <button 
+              onClick={() => scrollToSection('diagnostic')} 
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {language === 'en' ? 'Free Diagnostic' : 'Diagnóstico gratuito'}
+            </button>
+            <button 
               onClick={() => scrollToSection('quote')} 
               className="text-sm font-medium hover:text-primary transition-colors"
             >
