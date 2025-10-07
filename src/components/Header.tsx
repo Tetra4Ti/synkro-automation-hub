@@ -2,6 +2,7 @@ import { Moon, Sun, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
+import synkroLogo from '@/assets/synkro-logo.png';
 
 export const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -18,13 +19,11 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
-            </div>
-            <span className="text-xl font-bold">
-              Synkro
-              <span className="text-xs text-muted-foreground ml-1">by T4T</span>
-            </span>
+            <img 
+              src={synkroLogo} 
+              alt="Synkro Logo" 
+              className="h-8 w-auto object-contain"
+            />
           </div>
 
           {/* Navigation */}
