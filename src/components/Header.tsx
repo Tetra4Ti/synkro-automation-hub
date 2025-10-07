@@ -16,13 +16,13 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-28">
           {/* Logo */}
           <div className="flex items-center space-x-3 flex-shrink-0">
             <img 
               src={synkroLogo} 
               alt="Synkro Logo" 
-              className="h-16 w-auto object-contain"
+              className="h-24 w-24 object-contain"
             />
           </div>
 
