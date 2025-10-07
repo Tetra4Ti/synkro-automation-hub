@@ -1,0 +1,303 @@
+{
+  "RegistrationForm": {
+    "name": {
+      "fieldKey": "name",
+      "label_en": "Name",
+      "label_es": "Nombre",
+      "airtable_field": "Nombre",
+      "destination": "Airtable",
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "fieldKey": "email",
+      "label_en": "Email",
+      "label_es": "Correo Electrónico",
+      "airtable_field": "Email",
+      "destination": "Airtable",
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "fieldKey": "phone",
+      "label_en": "Phone",
+      "label_es": "Teléfono",
+      "airtable_field": "Telefono",
+      "destination": "Airtable",
+      "type": "tel",
+      "required": false
+    },
+    "marketingConsent": {
+      "fieldKey": "consent",
+      "label_en": "Marketing Consent",
+      "label_es": "Consentimiento de Marketing",
+      "airtable_field": "MarketingConsent",
+      "destination": "n8n + Email List",
+      "type": "checkbox",
+      "required": true
+    }
+  },
+  "FreeDiagnostic": {
+    "name": {
+      "fieldKey": "name",
+      "label_en": "Name",
+      "label_es": "Nombre",
+      "airtable_field": "Nombre",
+      "destination": "Airtable",
+      "type": "text",
+      "required": true
+    },
+    "company": {
+      "fieldKey": "company",
+      "label_en": "Company",
+      "label_es": "Empresa",
+      "airtable_field": "Empresa",
+      "destination": "Airtable",
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "fieldKey": "email",
+      "label_en": "Email",
+      "label_es": "Correo Electrónico",
+      "airtable_field": "Email",
+      "destination": "Airtable",
+      "type": "email",
+      "required": true
+    },
+    "workflow": {
+      "fieldKey": "workflow",
+      "label_en": "Business Description",
+      "label_es": "Descripción del Negocio",
+      "airtable_field": "DescripcionNegocio",
+      "destination": "n8n + OpenAI",
+      "type": "textarea",
+      "required": true,
+      "ai_analysis": true
+    },
+    "language": {
+      "fieldKey": "language",
+      "label_en": "Language",
+      "label_es": "Idioma",
+      "airtable_field": "Idioma",
+      "destination": "n8n",
+      "type": "select",
+      "required": true,
+      "options": ["en", "es"]
+    }
+  },
+  "QuoteForm": {
+    "name": {
+      "fieldKey": "name",
+      "label_en": "Name",
+      "label_es": "Nombre",
+      "airtable_field": "Nombre",
+      "destination": "Airtable",
+      "type": "text",
+      "required": true
+    },
+    "company": {
+      "fieldKey": "company",
+      "label_en": "Company",
+      "label_es": "Empresa",
+      "airtable_field": "Empresa",
+      "destination": "Airtable",
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "fieldKey": "email",
+      "label_en": "Email",
+      "label_es": "Correo Electrónico",
+      "airtable_field": "Email",
+      "destination": "Airtable",
+      "type": "email",
+      "required": true
+    },
+    "description": {
+      "fieldKey": "description",
+      "label_en": "Project Description",
+      "label_es": "Descripción del Proyecto",
+      "airtable_field": "DescripcionProyecto",
+      "destination": "Airtable",
+      "type": "textarea",
+      "required": true
+    },
+    "budget": {
+      "fieldKey": "budget",
+      "label_en": "Budget",
+      "label_es": "Presupuesto",
+      "airtable_field": "Presupuesto",
+      "destination": "Airtable",
+      "type": "select",
+      "required": true,
+      "options": [
+        {
+          "value": "small",
+          "label_en": "Small ($1k - $5k)",
+          "label_es": "Pequeño ($1k - $5k)"
+        },
+        {
+          "value": "medium",
+          "label_en": "Medium ($5k - $15k)",
+          "label_es": "Mediano ($5k - $15k)"
+        },
+        {
+          "value": "large",
+          "label_en": "Large ($15k - $50k)",
+          "label_es": "Grande ($15k - $50k)"
+        },
+        {
+          "value": "enterprise",
+          "label_en": "Enterprise ($50k+)",
+          "label_es": "Empresarial ($50k+)"
+        }
+      ]
+    },
+    "service": {
+      "fieldKey": "service",
+      "label_en": "Service Type",
+      "label_es": "Tipo de Servicio",
+      "airtable_field": "TipoServicio",
+      "destination": "Airtable",
+      "type": "select",
+      "required": false,
+      "options": [
+        {
+          "value": "automation",
+          "label_en": "Business Automation",
+          "label_es": "Automatización Empresarial"
+        },
+        {
+          "value": "website",
+          "label_en": "Smart Website",
+          "label_es": "Sitio Web Inteligente"
+        },
+        {
+          "value": "integration",
+          "label_en": "Custom Integration",
+          "label_es": "Integración Personalizada"
+        },
+        {
+          "value": "consulting",
+          "label_en": "Consulting",
+          "label_es": "Consultoría"
+        }
+      ]
+    },
+    "notes": {
+      "fieldKey": "notes",
+      "label_en": "Additional Notes",
+      "label_es": "Notas Adicionales",
+      "airtable_field": "Notas",
+      "destination": "n8n + Email",
+      "type": "textarea",
+      "required": false
+    }
+  },
+  "Contact": {
+    "subject": {
+      "fieldKey": "subject",
+      "label_en": "Subject",
+      "label_es": "Asunto",
+      "airtable_field": "Asunto",
+      "destination": "n8n + Email",
+      "type": "text",
+      "required": true
+    },
+    "message": {
+      "fieldKey": "message",
+      "label_en": "Message",
+      "label_es": "Mensaje",
+      "airtable_field": "Mensaje",
+      "destination": "n8n + Email",
+      "type": "textarea",
+      "required": true
+    }
+  },
+  "SavingsCalculator": {
+    "employees": {
+      "fieldKey": "employees",
+      "label_en": "Number of Employees",
+      "label_es": "Número de Empleados",
+      "airtable_field": "NumEmpleados",
+      "destination": "Calculation Only",
+      "type": "number",
+      "required": true
+    },
+    "manualHours": {
+      "fieldKey": "manualHours",
+      "label_en": "Manual Hours per Week",
+      "label_es": "Horas Manuales por Semana",
+      "airtable_field": "HorasManualesSemanales",
+      "destination": "Calculation Only",
+      "type": "number",
+      "required": true
+    },
+    "hourlyCost": {
+      "fieldKey": "hourlyCost",
+      "label_en": "Hourly Cost (€)",
+      "label_es": "Costo por Hora (€)",
+      "airtable_field": "CostoPorHora",
+      "destination": "Calculation Only",
+      "type": "number",
+      "required": true
+    }
+  },
+  "n8n_automation_triggers": {
+    "registration": {
+      "trigger_event": "User Registration",
+      "workflow_actions": [
+        "Store in Airtable (Leads table)",
+        "Send welcome email via SendGrid/Brevo",
+        "Schedule weekly follow-up sequence",
+        "Tag user in email marketing platform",
+        "Create task in CRM"
+      ],
+      "ai_personalization": true,
+      "openai_prompt": "Generate personalized welcome email based on user data"
+    },
+    "diagnostic": {
+      "trigger_event": "Free Diagnostic Submission",
+      "workflow_actions": [
+        "Store in Airtable (Diagnostics table)",
+        "Send to OpenAI for analysis",
+        "Generate PDF report",
+        "Email PDF to user",
+        "Schedule consultation follow-up",
+        "Notify sales team"
+      ],
+      "ai_personalization": true,
+      "openai_prompt": "Analyze business description and generate automation recommendations with ROI estimates"
+    },
+    "quote": {
+      "trigger_event": "Quote Request",
+      "workflow_actions": [
+        "Store in Airtable (Quotes table)",
+        "Send confirmation email",
+        "Notify sales team via Slack/Email",
+        "Create opportunity in CRM",
+        "Schedule follow-up reminder"
+      ],
+      "ai_personalization": false
+    }
+  },
+  "airtable_tables": {
+    "Leads": {
+      "description": "All user registrations and contacts",
+      "fields": ["Nombre", "Email", "Telefono", "MarketingConsent", "FechaRegistro", "Origen", "Estado"]
+    },
+    "Diagnostics": {
+      "description": "Free diagnostic submissions and AI analysis results",
+      "fields": ["Nombre", "Empresa", "Email", "DescripcionNegocio", "Idioma", "AnalisisIA", "PDFReporte", "FechaSolicitud"]
+    },
+    "Quotes": {
+      "description": "Quote requests and project proposals",
+      "fields": ["Nombre", "Empresa", "Email", "DescripcionProyecto", "Presupuesto", "TipoServicio", "Notas", "Estado", "FechaSolicitud"]
+    },
+    "Contacts": {
+      "description": "General contact form submissions",
+      "fields": ["Nombre", "Email", "Asunto", "Mensaje", "FechaContacto", "Estado"]
+    }
+  }
+}

@@ -18,7 +18,7 @@ export const AIAssistant = () => {
       <Button
         onClick={handleClick}
         size="icon"
-        className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-gradient-primary shadow-glow hover:shadow-glow-lg transition-all duration-300 group animate-pulse-glow p-0 overflow-hidden"
+        className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-gradient-primary shadow-elegant hover:shadow-glow transition-all duration-500 group animate-pulse-soft p-0 overflow-hidden"
         aria-label={t('assistant.tooltip')}
       >
         <img 

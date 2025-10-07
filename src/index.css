@@ -178,6 +178,27 @@
     }
   }
 
+  /* Soft elegant pulse for AI Assistant */
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(217 91% 60% / 0.2), 0 0 40px hsl(217 91% 60% / 0.1);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(217 91% 60% / 0.35), 0 0 60px hsl(217 91% 60% / 0.15);
+      transform: scale(1.02);
+    }
+  }
+
+  /* Elegant shadow utility */
+  .shadow-elegant {
+    box-shadow: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
+  }
+
   /* Fade in animations */
   .fade-in {
     animation: fadeIn 0.6s ease-out forwards;
