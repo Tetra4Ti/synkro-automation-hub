@@ -5,7 +5,7 @@ type Language = 'en' | 'es';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string) => any;
 }
 
 const translations = {
@@ -115,6 +115,55 @@ const translations = {
     
     // AI Assistant
     'assistant.tooltip': 'Chat with Synkro AI',
+    
+    // Savings Calculator
+    'calculator.title': 'Savings Calculator',
+    'calculator.subtitle': 'Calculate how much time and money Synkro can save you',
+    'calculator.employees': 'Number of employees',
+    'calculator.hours': 'Manual hours per week',
+    'calculator.cost': 'Hourly cost ($)',
+    'calculator.result': 'Synkro could save you {hours} hours and ${amount} per year',
+    
+    // Registration Modal
+    'registration.title': 'Welcome to Synkro',
+    'registration.subtitle': 'Register to unlock exclusive automation insights',
+    'registration.name': 'Name',
+    'registration.email': 'Email',
+    'registration.phone': 'Phone (optional)',
+    'registration.consent': 'I agree to receive marketing communications',
+    'registration.submit': 'Get Started',
+    'registration.success': 'Welcome! Check your email for next steps.',
+    'registration.google': 'Continue with Google',
+    'registration.apple': 'Continue with Apple',
+    'registration.microsoft': 'Continue with Microsoft',
+    
+    // Automation Gallery
+    'gallery.title': 'Automation Gallery',
+    'gallery.subtitle': 'Real automation examples from businesses like yours',
+    'gallery.examples': [
+      {
+        title: 'Salon Reservation Automation',
+        description: 'Automatically manage bookings, send reminders via WhatsApp, and sync with Google Calendar.',
+      },
+      {
+        title: 'Shopify ↔ Airtable Sync',
+        description: 'Real-time inventory synchronization between your online store and database.',
+      },
+      {
+        title: 'WhatsApp Client Reminders',
+        description: 'Automated appointment reminders and follow-ups via WhatsApp Business API.',
+      },
+      {
+        title: 'Automated Lead Follow-up',
+        description: 'Intelligent lead nurturing with personalized emails based on user behavior.',
+      },
+    ],
+    'gallery.cta': 'Get this for my business',
+    
+    // Final Message
+    'finalMessage.line1': 'While you read this, another company already automated with Synkro.',
+    'finalMessage.line2': 'Will you keep wasting hours manually?',
+    'finalMessage.cta': 'Automate now',
   },
   es: {
     // Hero
@@ -222,6 +271,55 @@ const translations = {
     
     // AI Assistant
     'assistant.tooltip': 'Chatear con Synkro AI',
+    
+    // Savings Calculator
+    'calculator.title': 'Calculadora de Ahorro',
+    'calculator.subtitle': 'Calcula cuánto tiempo y dinero Synkro puede ahorrarte',
+    'calculator.employees': 'Número de empleados',
+    'calculator.hours': 'Horas manuales por semana',
+    'calculator.cost': 'Costo por hora ($)',
+    'calculator.result': 'Synkro podría ahorrarte {hours} horas y ${amount} por año',
+    
+    // Registration Modal
+    'registration.title': 'Bienvenido a Synkro',
+    'registration.subtitle': 'Regístrate para desbloquear información exclusiva de automatización',
+    'registration.name': 'Nombre',
+    'registration.email': 'Correo electrónico',
+    'registration.phone': 'Teléfono (opcional)',
+    'registration.consent': 'Acepto recibir comunicaciones de marketing',
+    'registration.submit': 'Comenzar',
+    'registration.success': '¡Bienvenido! Revisa tu correo para los siguientes pasos.',
+    'registration.google': 'Continuar con Google',
+    'registration.apple': 'Continuar con Apple',
+    'registration.microsoft': 'Continuar con Microsoft',
+    
+    // Automation Gallery
+    'gallery.title': 'Galería de Automatizaciones',
+    'gallery.subtitle': 'Ejemplos reales de automatización de empresas como la tuya',
+    'gallery.examples': [
+      {
+        title: 'Automatización de Reservas de Salón',
+        description: 'Gestiona automáticamente las reservas, envía recordatorios por WhatsApp y sincroniza con Google Calendar.',
+      },
+      {
+        title: 'Sincronización Shopify ↔ Airtable',
+        description: 'Sincronización de inventario en tiempo real entre tu tienda online y base de datos.',
+      },
+      {
+        title: 'Recordatorios de Cliente por WhatsApp',
+        description: 'Recordatorios automáticos de citas y seguimientos vía WhatsApp Business API.',
+      },
+      {
+        title: 'Seguimiento Automático de Leads',
+        description: 'Nutrición inteligente de leads con correos personalizados basados en el comportamiento del usuario.',
+      },
+    ],
+    'gallery.cta': 'Quiero esto en mi empresa',
+    
+    // Final Message
+    'finalMessage.line1': 'Mientras lees esto, otra empresa ya automatizó su negocio con Synkro.',
+    'finalMessage.line2': '¿Vas a seguir haciendo tareas manuales?',
+    'finalMessage.cta': 'Automatiza ahora',
   },
 };
 
@@ -242,7 +340,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setLanguageState(lang);
   };
 
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     return translations[language][key as keyof typeof translations.en] || key;
   };
 
