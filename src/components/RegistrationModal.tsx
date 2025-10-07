@@ -13,7 +13,7 @@ interface RegistrationModalProps {
 }
 
 export const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -28,24 +28,61 @@ export const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps
     if (!formData.consent) {
       toast({
         title: 'Error',
-        description: 'Please accept the consent to continue',
+        description: language === 'es' 
+          ? 'Por favor acepta el consentimiento para continuar'
+          : 'Please accept the consent to continue',
         variant: 'destructive',
       });
       return;
     }
 
     setIsSubmitting(true);
-    // Simulate n8n API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log('Registration data:', formData);
-    
-    toast({
-      title: t('registration.success'),
-    });
 
-    onOpenChange(false);
-    setIsSubmitting(false);
+    try {
+      const payload = {
+        form_type: 'RegistrationForm',
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || undefined,
+        language: language,
+        marketingConsent: formData.consent,
+      };
+
+      const response = await fetch('https://n8n.t4tproyect.com/webhook/synkro/form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.status === 'ok') {
+          toast({
+            title: language === 'es' 
+              ? '✅ Hemos recibido tu solicitud. Te contactaremos pronto.'
+              : '✅ Your request has been received. We\'ll get back to you shortly.',
+          });
+          onOpenChange(false);
+          setFormData({ name: '', email: '', phone: '', consent: false });
+        } else {
+          throw new Error('Invalid response');
+        }
+      } else {
+        throw new Error('Request failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: language === 'es'
+          ? '⚠️ Ocurrió un error al enviar el formulario. Inténtalo de nuevo más tarde.'
+          : '⚠️ An error occurred while submitting the form. Please try again later.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

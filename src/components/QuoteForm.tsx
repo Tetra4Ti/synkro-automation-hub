@@ -14,7 +14,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Send } from 'lucide-react';
 
 export const QuoteForm = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -23,32 +23,61 @@ export const QuoteForm = () => {
     email: '',
     description: '',
     budget: '',
+    service: '',
+    notes: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const payload = {
+        form_type: 'QuoteForm',
+        name: formData.name,
+        company: formData.company,
+        email: formData.email,
+        description: formData.description,
+        budget: formData.budget,
+        service: formData.service || undefined,
+        notes: formData.notes || undefined,
+        language: language,
+      };
 
-    console.log('Quote form submitted:', formData);
+      const response = await fetch('https://n8n.t4tproyect.com/webhook/synkro/form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
 
-    toast({
-      title: t('quote.success'),
-      description: t('quote.subtitle'),
-    });
-
-    // Reset form
-    setFormData({
-      name: '',
-      company: '',
-      email: '',
-      description: '',
-      budget: '',
-    });
-
-    setIsSubmitting(false);
+      if (response.ok) {
+        const data = await response.json();
+        if (data.status === 'ok') {
+          toast({
+            title: language === 'es'
+              ? '✅ Hemos recibido tu solicitud. Te contactaremos pronto.'
+              : '✅ Your request has been received. We\'ll get back to you shortly.',
+          });
+          setFormData({ name: '', company: '', email: '', description: '', budget: '', service: '', notes: '' });
+        } else {
+          throw new Error('Invalid response');
+        }
+      } else {
+        throw new Error('Request failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: language === 'es'
+          ? '⚠️ Ocurrió un error al enviar el formulario. Inténtalo de nuevo más tarde.'
+          : '⚠️ An error occurred while submitting the form. Please try again later.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
